@@ -13,8 +13,15 @@ export default class Home extends React.Component {
     }
 
     renderSideDemo(){
-        return <SiderDemo value={this.state.square}></SiderDemo>
+        return <SiderDemo 
+                value={this.state.square}
+                
+                    ></SiderDemo>
     }
+
+    // handleClick(){
+    //     alert('hello')
+    // }
 
     render() {
         return (
