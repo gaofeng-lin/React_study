@@ -9,7 +9,7 @@ import './About.css'
 const { Option } = Select;
 
 function onChange(value) {
-  alert(value);
+  console.log(value);
   // <Route exact path={"/"+value} component={Home}/>
   // top.location.href={"localhost:3000/#/""+"value};
 }
@@ -25,16 +25,15 @@ class SiderDemo extends Component {
     showSearch
     placeholder="Select a person"
     optionFilterProp="children"
-    defaultValue={this.props.value[0]}
     onChange={onChange}
     // onSearch={onSearch}
     filterOption={(input, option) =>
       option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
     }
   >
-    <Option value="jack">{this.props.value[0]}</Option>
-    <Option value="lucy">{this.props.value[1]}</Option>
-    <Option value="tom">{this.props.value[2]}</Option>
+    <Option value="jack">Jack</Option>
+    <Option value="lucy">Lucy</Option>
+    <Option value="tom">Tom</Option>
   </Select>
     )
   }
